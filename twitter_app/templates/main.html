@@ -1,0 +1,25 @@
+<html>
+
+<form id="frm" name="frm" method="POST" action="/">
+  {% csrf_token %}
+  <button id="button1" type="submit"> Tıhla </button>
+</form>
+
+ Kullanıcı adi: <input id="username" type="text" name="fname">
+
+
+ <p id="xxd"></p>
+
+
+</html>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+
+
+$("#button1").click(function(){
+  var xd = $("#username").val();
+  document.frm.action = "/twitter/dashboard/?username=" + xd
+    });
+
+
+</script>
